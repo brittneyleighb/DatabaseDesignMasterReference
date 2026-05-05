@@ -20,13 +20,10 @@ desktop.ini
 *.sublime-project
 *.sublime-workspace
 
-# ---- Source PDF (don't redistribute course material) ----
-zyBooks_ADD.pdf
+# ---- Source / reference materials (kept local, not redistributed) ----
 *.pdf
 
 # ---- Working / scratch files ----
-zybooks_text.txt
-zybooks_clean.txt
 *.tmp
 *.bak
 *.log
