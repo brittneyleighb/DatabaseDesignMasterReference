@@ -1,13 +1,13 @@
 # Database Design — Master Reference
 
-My personal study reference, synthesized from notes and concepts I worked through in graduate database design coursework. The content here is original synthesis — concepts are universal database knowledge, but the explanations, metaphors, and real-world scenarios are my own framings, written for my own understanding. This single document combines four resources:
+A study reference, synthesized from notes and concepts I worked through in graduate database design coursework. The content here is original synthesis — concepts are universal database knowledge, but the explanations, metaphors, and real-world scenarios are my own framings, written for my own understanding. This single document combines four resources:
 
 1. **Quick-reference cheatsheet** — compact tables for fast lookup
 2. **In-depth concept summaries** — explanations with metaphors, plain-English layman descriptions, and real-world scenarios
 3. **Glossary** — alphabetized definitions of every key term
 4. **Documentation & further learning** — curated external links
 
-> **A note on sources:** This is a personal study guide, not a reproduction of any specific course material. Concepts covered are standard database fundamentals you'll find in any major textbook (Silberschatz/Korth, Ramakrishnan/Gehrke, Kleppmann) and across the linked official documentation. If you're using this and want to dig deeper into a topic, see Part IV for primary sources.
+> **A note on sources:** This is  not a reproduction of any specific course material. Concepts covered are standard database fundamentals you'll find in any major textbook (Silberschatz/Korth, Ramakrishnan/Gehrke, Kleppmann) and across the linked official documentation. If you're using this and want to dig deeper into a topic, see Part IV for primary sources.
 
 ---
 
