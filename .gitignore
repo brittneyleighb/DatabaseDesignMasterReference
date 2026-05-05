@@ -1,0 +1,71 @@
+# ---- OS files ----
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+desktop.ini
+
+# ---- Editor / IDE ----
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.project
+.settings/
+.classpath
+*.sublime-project
+*.sublime-workspace
+
+# ---- Source PDF (don't redistribute course material) ----
+zyBooks_ADD.pdf
+*.pdf
+
+# ---- Working / scratch files ----
+zybooks_text.txt
+zybooks_clean.txt
+*.tmp
+*.bak
+*.log
+
+# ---- Python (in case you add scripts later) ----
+__pycache__/
+*.py[cod]
+*$py.class
+*.egg-info/
+.venv/
+venv/
+env/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# ---- Node (if you add docs tooling like docsify, mdbook, etc.) ----
+node_modules/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+package-lock.json
+yarn.lock
+
+# ---- Build output (mkdocs, hugo, jekyll, etc.) ----
+_site/
+site/
+public/
+build/
+dist/
+.cache/
+
+# ---- Environment / secrets ----
+.env
+.env.local
+.env.*.local
+*.pem
+*.key
+
+# ---- Misc ----
+.history/
+coverage/
