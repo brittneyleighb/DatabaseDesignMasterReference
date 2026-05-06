@@ -3,7 +3,7 @@
 My personal study reference, synthesized from notes and concepts I worked through in graduate database design coursework. The content here is original synthesis. The concepts are universal database knowledge, but the explanations, metaphors, and real-world scenarios are my own framings, written for my own understanding. This single document combines four resources:
 
 1. **Quick-reference cheatsheet:** compact tables for fast lookup
-2. **In-depth concept summaries:** explanations with metaphors, plain-English layman descriptions, and real-world scenarios
+2. **In-depth concept summaries:** explanations with metaphors, everyday-language overviews, and real-world scenarios
 3. **Glossary:** alphabetized definitions of every key term
 4. **Documentation & further learning:** curated external links
 
@@ -42,7 +42,7 @@ My personal study reference, synthesized from notes and concepts I worked throug
 26. Common Pitfalls Checklist
 
 ### Part II — In-Depth Concept Summaries
-Each concept opens with a plain-English explanation, then technical detail with metaphors, and closes with a real-world scenario.
+Each concept opens with an everyday-language overview, then technical detail with metaphors, and closes with a real-world scenario.
 
 1. The Relational Model — Why Tables Won
 2. SQL — A Declarative Language
@@ -553,7 +553,7 @@ db.students.deleteOne({ name: 'Sue' });
 
 ## 1. The Relational Model — Why Tables Won
 
-In plain English, a relational database is a system of organized lists where each list is a table, each row is a record, and each table can be linked to others by shared values. Think of it like a really disciplined filing cabinet. Every drawer has a clear label, every folder follows the same template within a drawer, and you can cross-reference one folder to another by writing down the matching ID. This structure is what lets your bank track millions of customers and billions of transactions without losing a penny, and what lets a hospital pull up the right patient's record in milliseconds. Almost every business application you use (payroll, inventory, electronic medical records, airline reservations) is sitting on top of a relational database.
+A relational database is a system of organized lists where each list is a table, each row is a record, and each table can be linked to others by shared values. Think of it like a really disciplined filing cabinet. Every drawer has a clear label, every folder follows the same template within a drawer, and you can cross-reference one folder to another by writing down the matching ID. This structure is what lets your bank track millions of customers and billions of transactions without losing a penny, and what lets a hospital pull up the right patient's record in milliseconds. Almost every business application you use (payroll, inventory, electronic medical records, airline reservations) is sitting on top of a relational database.
 
 In 1970 E. F. Codd published a deceptively simple idea: store data in **relations** (tables). What made it revolutionary wasn't tables themselves. It was that the model also gave us a **mathematical algebra** for manipulating those tables, and a clean separation between *what* you want and *how* the database fetches it.
 
@@ -572,7 +572,7 @@ Some terminology to keep straight. A **table** is a fixed sequence of named colu
 
 ## 2. SQL — A Declarative Language
 
-In plain English, SQL is the language you use to talk to a relational database. The unusual thing about it is that you describe *what answer you want* rather than *how to find it*. You'd say "give me all customers in California who spent over $500 last month" and the database figures out the most efficient way to scan, filter, and combine the data. This is similar to telling a personal shopper your shopping list versus walking the aisles yourself: you save effort, but you have to trust the shopper. Almost every analytics tool, business dashboard, and CRUD app you've ever interacted with talks to its database in SQL behind the scenes.
+SQL is the language you use to talk to a relational database. The unusual thing about it is that you describe *what answer you want* rather than *how to find it*. You'd say "give me all customers in California who spent over $500 last month" and the database figures out the most efficient way to scan, filter, and combine the data. This is similar to telling a personal shopper your shopping list versus walking the aisles yourself: you save effort, but you have to trust the shopper. Almost every analytics tool, business dashboard, and CRUD app you've ever interacted with talks to its database in SQL behind the scenes.
 
 SQL is the universal query language of relational databases. It's **declarative**: you describe the result you want, not the steps to compute it. Compare:
 
@@ -609,7 +609,7 @@ A **statement** ends with a semicolon. A statement is made of **clauses** like `
 
 ## 3. Keys, Constraints, and Referential Integrity
 
-In plain English, keys are the way a database knows that "this row" is uniquely *this* row, and constraints are the rules the database enforces so that bad data simply can't get in. A primary key is the row's permanent ID badge. A foreign key is one row pointing at another row's badge to say "I belong with that one." Constraints are built-in rules like "this field can't be empty," "no two users can have the same email," or "salary must be positive." These guarantees mean you can trust the database to keep its house in order without your application code re-checking everything.
+Keys are the way a database knows that "this row" is uniquely *this* row, and constraints are the rules the database enforces so that bad data simply can't get in. A primary key is the row's permanent ID badge. A foreign key is one row pointing at another row's badge to say "I belong with that one." Constraints are built-in rules like "this field can't be empty," "no two users can have the same email," or "salary must be positive." These guarantees mean you can trust the database to keep its house in order without your application code re-checking everything.
 
 A **primary key (PK)** is the column (or set of columns) you nominate to identify each row uniquely. The PK has three jobs:
 
@@ -646,7 +646,7 @@ A constraint is a rule the database enforces automatically. It rejects any inser
 
 ## 4. Joins and the Algebra Behind Them
 
-In plain English, a join is how you combine information from two related tables into one result. If your customers are in one table and their orders are in another, a join lets you ask "who ordered what?" by lining up rows where the customer ID matches. Different join types control what happens when there's no match. Do you skip those rows, or include them with blanks for the missing side? Joins are the engine of almost every report you'll ever see, from a sales dashboard to a "books you might like" recommendation.
+A join is how you combine information from two related tables into one result. If your customers are in one table and their orders are in another, a join lets you ask "who ordered what?" by lining up rows where the customer ID matches. Different join types control what happens when there's no match. Do you skip those rows, or include them with blanks for the missing side? Joins are the engine of almost every report you'll ever see, from a sales dashboard to a "books you might like" recommendation.
 
 A **join** combines rows from two tables based on related column values. The mental model:
 
@@ -685,7 +685,7 @@ Two algebra expressions are **equivalent** if they always produce the same resul
 
 ## 5. Subqueries, Views, and Composability
 
-In plain English, a subquery is a query nested inside another query. It's how you ask "find me X based on whatever Y satisfies these conditions" in a single shot. A view is a saved query you can reuse by name, like a smart shortcut. You define "premium customers in California" once and then everyone in the company queries `premium_ca_customers` instead of rewriting the criteria. Both let you compose complex questions out of simpler building blocks. They're how data teams keep huge codebases of SQL maintainable instead of having identical 50-line subqueries pasted everywhere.
+A subquery is a query nested inside another query. It's how you ask "find me X based on whatever Y satisfies these conditions" in a single shot. A view is a saved query you can reuse by name, like a smart shortcut. You define "premium customers in California" once and then everyone in the company queries `premium_ca_customers` instead of rewriting the criteria. Both let you compose complex questions out of simpler building blocks. They're how data teams keep huge codebases of SQL maintainable instead of having identical 50-line subqueries pasted everywhere.
 
 A **subquery** is a query inside another query. It can appear in:
 
@@ -718,7 +718,7 @@ A **materialized view** stores the result physically, refreshed periodically. Us
 
 ## 6. Database Design — From Idea to Schema
 
-In plain English, database design is the process of figuring out what tables you need and how they connect, *before* you write any SQL. You start by listing the things you care about (customers, products, orders), the relationships between them (a customer places many orders), and the properties of each (a customer has a name and email). Then you translate that picture into actual tables with primary keys and foreign keys. Skipping this step is the #1 cause of schemas that have to be painfully refactored two years in, when you realize "wait, a product can have multiple categories?" requires a table you never built.
+Database design is the process of figuring out what tables you need and how they connect, *before* you write any SQL. You start by listing the things you care about (customers, products, orders), the relationships between them (a customer places many orders), and the properties of each (a customer has a name and email). Then you translate that picture into actual tables with primary keys and foreign keys. Skipping this step is the #1 cause of schemas that have to be painfully refactored two years in, when you realize "wait, a product can have multiple categories?" requires a table you never built.
 
 Database design moves from abstract to concrete in three phases:
 
@@ -783,7 +783,7 @@ Choose **artificial keys** (auto-incrementing integers) over natural keys when t
 
 ## 7. Normalization — Eliminating Redundancy
 
-In plain English, normalization is the discipline of *not* repeating yourself in your tables. If your customer's address shows up in 50 order rows, then changing their address means updating 50 rows, and if you miss any, your data is now lying. The fix is to put the address in *one* place (the customer table) and let the orders just reference the customer's ID. Normalization is to databases what DRY (Don't Repeat Yourself) is to source code: a discipline that prevents bugs.
+Normalization is the discipline of *not* repeating yourself in your tables. If your customer's address shows up in 50 order rows, then changing their address means updating 50 rows, and if you miss any, your data is now lying. The fix is to put the address in *one* place (the customer table) and let the orders just reference the customer's ID. Normalization is to databases what DRY (Don't Repeat Yourself) is to source code: a discipline that prevents bugs.
 
 Redundancy isn't just wasted disk space. It's an open invitation for inconsistency. If a customer's address appears in 100 order rows and the customer moves, you have to update 100 rows perfectly or your data lies.
 
@@ -821,7 +821,7 @@ Sometimes you intentionally *un*-normalize for performance, typically in analyti
 
 ## 8. Storage and Indexing Internals
 
-In plain English, indexes are like the back-of-the-book index in a textbook. Instead of reading every page to find mentions of "photosynthesis," you flip to the index, see "photosynthesis: pp. 17, 42, 88," and jump straight there. Database indexes do the same thing for table rows. They let the database skip past the 99.9% of rows that don't match your query. The trade-off is that maintaining the index slows down inserts and updates (someone has to keep it sorted), so you don't index everything. Picking the right indexes is one of the highest-leverage things a database engineer does for query performance.
+Indexes are like the back-of-the-book index in a textbook. Instead of reading every page to find mentions of "photosynthesis," you flip to the index, see "photosynthesis: pp. 17, 42, 88," and jump straight there. Database indexes do the same thing for table rows. They let the database skip past the 99.9% of rows that don't match your query. The trade-off is that maintaining the index slows down inserts and updates (someone has to keep it sorted), so you don't index everything. Picking the right indexes is one of the highest-leverage things a database engineer does for query performance.
 
 ### Storage media, three tiers of memory
 
@@ -890,7 +890,7 @@ An **index** is a sorted auxiliary data structure that maps column values to row
 
 ## 9. Transactions and ACID
 
-In plain English, a transaction is a group of database changes that either *all* happen or *none* happen, like a bank transfer where you can't have the money leave your account without arriving in the recipient's. ACID is the four-letter promise that databases make about transactions: the changes are **A**ll-or-nothing, the database stays **C**onsistent (no rules broken), concurrent transactions don't trample each other (**I**solation), and once committed, the changes survive crashes (**D**urable). These properties are the reason banks, payment systems, ticketing platforms, and inventory systems can be trusted not to lose your money or double-sell the last concert ticket.
+A transaction is a group of database changes that either *all* happen or *none* happen, like a bank transfer where you can't have the money leave your account without arriving in the recipient's. ACID is the four-letter promise that databases make about transactions: the changes are **A**ll-or-nothing, the database stays **C**onsistent (no rules broken), concurrent transactions don't trample each other (**I**solation), and once committed, the changes survive crashes (**D**urable). These properties are the reason banks, payment systems, ticketing platforms, and inventory systems can be trusted not to lose your money or double-sell the last concert ticket.
 
 A **transaction** is a sequence of operations that must commit (succeed) or rollback (fail) as a *single unit*. The canonical example is a bank transfer: debit account A *and* credit account B, never one without the other.
 
@@ -934,7 +934,7 @@ A **schedule** is the interleaving of operations from concurrent transactions. T
 
 ## 10. Concurrency Control — Locks and Snapshots
 
-In plain English, when 1,000 people try to buy the last 10 tickets at the same instant, how does the database avoid selling the same ticket to 7 of them? The answer is concurrency control. The database briefly "locks" rows that one transaction is touching, forcing others to wait their turn, like a single-occupancy bathroom stall. Modern databases also have an alternative called snapshot isolation. Each transaction works on its own private copy of the data and only checks for conflicts at the end, like everyone editing their own copy of a Google Doc that's then merged. Concurrency control is what makes ticketing platforms, flash sales, and bidding systems trustworthy.
+When 1,000 people try to buy the last 10 tickets at the same instant, how does the database avoid selling the same ticket to 7 of them? The answer is concurrency control. The database briefly "locks" rows that one transaction is touching, forcing others to wait their turn, like a single-occupancy bathroom stall. Modern databases also have an alternative called snapshot isolation. Each transaction works on its own private copy of the data and only checks for conflicts at the end, like everyone editing their own copy of a Google Doc that's then merged. Concurrency control is what makes ticketing platforms, flash sales, and bidding systems trustworthy.
 
 ### Two-phase locking (2PL)
 
@@ -971,7 +971,7 @@ Instead of locks, give each transaction a *private snapshot* of the database at 
 
 ## 11. Recovery and Backup
 
-In plain English, recovery is the database's ability to come back to a correct state after a crash, power loss, or software failure. The trick is that the database keeps a journal (a log of every change in the order it happened) *before* applying changes to the actual data files. After a crash, the database replays the journal: redo the changes from completed transactions, undo the ones that were in-flight. Backups are the second line of defense: full or incremental copies of the data, ideally stored somewhere other than the running database. Together, recovery and backups are why a database can tell you with confidence "your committed data is safe."
+Recovery is the database's ability to come back to a correct state after a crash, power loss, or software failure. The trick is that the database keeps a journal (a log of every change in the order it happened) *before* applying changes to the actual data files. After a crash, the database replays the journal: redo the changes from completed transactions, undo the ones that were in-flight. Backups are the second line of defense: full or incremental copies of the data, ideally stored somewhere other than the running database. Together, recovery and backups are why a database can tell you with confidence "your committed data is safe."
 
 The **recovery log** (also called write-ahead log, WAL) is the database's notebook. Every change is recorded *before* it's applied to disk. The log contains:
 
@@ -1002,7 +1002,7 @@ This is called **ARIES recovery** (Algorithm for Recovery and Isolation Exploiti
 
 ## 12. Distributed Databases and CAP
 
-In plain English, when a database grows beyond what a single computer can handle (in storage, requests per second, or geographic reach), you spread the data across many computers. That's powerful but introduces a hard truth called the CAP theorem. When computers can't talk to each other across the network (a "partition"), you have to choose between giving stale answers (sacrificing **C**onsistency) or refusing to answer at all (sacrificing **A**vailability). You can't have both. This trade-off shapes the architecture of every globally-scaled product you use, from Instagram to your bank's mobile app.
+When a database grows beyond what a single computer can handle (in storage, requests per second, or geographic reach), you spread the data across many computers. That's powerful but introduces a hard truth called the CAP theorem. When computers can't talk to each other across the network (a "partition"), you have to choose between giving stale answers (sacrificing **C**onsistency) or refusing to answer at all (sacrificing **A**vailability). You can't have both. This trade-off shapes the architecture of every globally-scaled product you use, from Instagram to your bank's mobile app.
 
 When data outgrows one machine, you have options:
 
@@ -1052,7 +1052,7 @@ In a network partition (some nodes can't reach others), a distributed system can
 
 ## 13. Data Warehouses and Analytics
 
-In plain English, your day-to-day operational database (orders coming in, accounts being created) is optimized for fast small writes, but it's terrible for big-picture questions like "what did we sell by region last quarter?" The fix is a separate database called a data warehouse, designed only for analytics. It gets a copy of operational data, organized differently (think one giant flat sales fact table surrounded by descriptive lookup tables, a "star schema"), and queries that would crush the live database fly through it. This separation is why business dashboards never slow down the e-commerce site you're shopping on.
+Your day-to-day operational database (orders coming in, accounts being created) is optimized for fast small writes, but it's terrible for big-picture questions like "what did we sell by region last quarter?" The fix is a separate database called a data warehouse, designed only for analytics. It gets a copy of operational data, organized differently (think one giant flat sales fact table surrounded by descriptive lookup tables, a "star schema"), and queries that would crush the live database fly through it. This separation is why business dashboards never slow down the e-commerce site you're shopping on.
 
 **Operational data** runs the business: small transactions, current state. **Analytic data** explains the business: long-running queries, historical trends. The two have opposing requirements, so we usually separate them. Operational data lives in **OLTP** databases; analytic data lives in **data warehouses** (OLAP).
 
@@ -1085,7 +1085,7 @@ A **data lake** is the raw, schema-less precursor to a warehouse: store everythi
 
 ## 14. Complex Types and Object-Relational
 
-In plain English, the original SQL world had simple types: numbers, strings, dates. But the real world has nested data. A customer's "addresses" might be a list of multiple addresses, a product might have a JSON blob of optional specs, a delivery zone might be a polygon on a map. Modern databases support these complex types directly so you don't have to flatten everything into flat columns. The choice between relational tables, JSON columns, and other complex types is one of the most consequential design decisions for any modern app. Get it wrong and you're rewriting in two years.
+The original SQL world had simple types: numbers, strings, dates. But the real world has nested data. A customer's "addresses" might be a list of multiple addresses, a product might have a JSON blob of optional specs, a delivery zone might be a polygon on a map. Modern databases support these complex types directly so you don't have to flatten everything into flat columns. The choice between relational tables, JSON columns, and other complex types is one of the most consequential design decisions for any modern app. Get it wrong and you're rewriting in two years.
 
 The relational model started with simple types (numbers, strings, dates). Modern SQL extends this:
 
@@ -1131,7 +1131,7 @@ An **object-relational mapping (ORM)** like SQLAlchemy or Hibernate translates b
 
 ## 15. NoSQL — When Tables Aren't Enough
 
-In plain English, NoSQL is a family of databases that ditch SQL's strict table structure in exchange for scale, flexibility, or specialized power. Want to handle 100 million simple key-value lookups per second? Use Redis. Want to store JSON documents that can have any shape? Use MongoDB. Want to store relationships in a way that walking from "friend of a friend" is instant? Use a graph database like Neo4j. These aren't replacements for relational databases. They're complements, used alongside the main database for the workloads relational systems aren't optimal for.
+NoSQL is a family of databases that ditch SQL's strict table structure in exchange for scale, flexibility, or specialized power. Want to handle 100 million simple key-value lookups per second? Use Redis. Want to store JSON documents that can have any shape? Use MongoDB. Want to store relationships in a way that walking from "friend of a friend" is instant? Use a graph database like Neo4j. These aren't replacements for relational databases. They're complements, used alongside the main database for the workloads relational systems aren't optimal for.
 
 NoSQL ("not only SQL") covers four broad models, born from the need to scale *horizontally* across cheap commodity hardware:
 
@@ -1168,7 +1168,7 @@ NoSQL gives up some relational guarantees (joins, ACID across documents) in exch
 
 ## 16. Database Programming Patterns
 
-In plain English, database programming is how you actually wire your application code (Python, Java, JavaScript, etc.) to the database. The dominant pattern today is the driver/API approach: your app uses a library to send SQL strings and receive results back. Older code may have SQL embedded directly in the source, translated by a precompiler. And you can also push logic *into* the database via stored procedures and triggers that run server-side. Each approach has trade-offs around portability, performance, and where the business logic lives.
+Database programming is how you actually wire your application code (Python, Java, JavaScript, etc.) to the database. The dominant pattern today is the driver/API approach: your app uses a library to send SQL strings and receive results back. Older code may have SQL embedded directly in the source, translated by a precompiler. And you can also push logic *into* the database via stored procedures and triggers that run server-side. Each approach has trade-offs around portability, performance, and where the business logic lives.
 
 ### Three approaches to talking to a database
 
