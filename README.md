@@ -11,15 +11,6 @@ My personal study reference, synthesized from notes and concepts I worked throug
 
 ---
 
-## How to use this document
-
-- **Studying for an exam?** Skim Part I (the cheatsheet) first to refresh the surface, then dive into the relevant sections of Part II for any concept that feels fuzzy.
-- **Looking something up mid-task?** The cheatsheet's tables and code blocks are designed for that. Use your editor's search.
-- **Trying to learn a topic deeply?** Read the relevant section in Part II. Each concept has a plain-English explanation, technical depth, metaphors, and a real-world scenario showing where it matters. Then check the glossary for unfamiliar terms.
-- **Want to dig further?** Part IV links to official documentation, classic textbooks, and free courses for every major topic.
-
----
-
 ## Table of Contents
 
 ### Part I — Quick Reference Cheatsheet
